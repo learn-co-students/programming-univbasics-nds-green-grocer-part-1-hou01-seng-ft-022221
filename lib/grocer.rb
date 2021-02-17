@@ -5,11 +5,8 @@ def find_item_by_name_in_collection(name, collection)
   nil
 end
 
-require "pry"
-
 def consolidate_cart(cart)
   kart = []
-  
   cart.each do |g_item|
     c_item = find_item_by_name_in_collection(g_item[:item], kart)
     if c_item
@@ -21,7 +18,7 @@ def consolidate_cart(cart)
       else
         g_item[:count] = 1 
         kart << g_item
-    end
+   end
   end 
  kart
 end
